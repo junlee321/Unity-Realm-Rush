@@ -121,25 +121,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &665898042 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 91079860006943948, guid: 1207203255dc04340b02005ec02d734c,
-    type: 3}
-  m_PrefabInstance: {fileID: 7689283534060463465}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &665898043
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 665898042}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3af8f0740352e094fafe9da37827b111, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gridSize: 10
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,41 +303,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 34591796192643635, guid: 1207203255dc04340b02005ec02d734c,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 56e6615d65c01cc4c91b4987d76aa2b4, type: 2}
     - target: {fileID: 91079860006943948, guid: 1207203255dc04340b02005ec02d734c,
         type: 3}
       propertyPath: m_Name
       value: Quad cube
       objectReference: {fileID: 0}
-    - target: {fileID: 2764383322946551943, guid: 1207203255dc04340b02005ec02d734c,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 56e6615d65c01cc4c91b4987d76aa2b4, type: 2}
-    - target: {fileID: 3175734398434462438, guid: 1207203255dc04340b02005ec02d734c,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 206a1de7207b77b4d9b51a9f43561d14, type: 2}
-    - target: {fileID: 3492996626976969975, guid: 1207203255dc04340b02005ec02d734c,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 206a1de7207b77b4d9b51a9f43561d14, type: 2}
-    - target: {fileID: 3792746046828500831, guid: 1207203255dc04340b02005ec02d734c,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: ab321509fcc72ed46bb9b6a36b871960, type: 2}
-    - target: {fileID: 5285530409834265141, guid: 1207203255dc04340b02005ec02d734c,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: ab321509fcc72ed46bb9b6a36b871960, type: 2}
     - target: {fileID: 8713494104976129351, guid: 1207203255dc04340b02005ec02d734c,
         type: 3}
       propertyPath: m_LocalPosition.x
