@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8713494104976129351}
   - component: {fileID: 665898043}
+  - component: {fileID: 8295743040449057712}
   m_Layer: 0
   m_Name: Quad cube
   m_TagString: Untagged
@@ -50,6 +51,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gridSize: 10
+--- !u!114 &8295743040449057712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91079860006943948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25ee0bd36e1075842a6f93c4bc619edc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1133889439871218040
 GameObject:
   m_ObjectHideFlags: 0
