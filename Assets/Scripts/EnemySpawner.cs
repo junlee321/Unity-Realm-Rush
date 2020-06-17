@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
+    [Range(0.1f, 100f)]
     [SerializeField] float spawnTimer = 1f;
     [SerializeField] EnemyMovement enemys;
 
@@ -17,7 +18,8 @@ public class EnemySpawner : MonoBehaviour
     {
         while (true)//forever
         {
-            print("spawning");
+            Instantiate(enemys, transform.position, Quaternion.identity);
+
             yield return new WaitForSeconds(spawnTimer);
         }
     }

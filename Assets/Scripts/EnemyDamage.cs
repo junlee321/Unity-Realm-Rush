@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class EnemyDamage : MonoBehaviour
 {
     [SerializeField] int enemyHitPoints = 10;
     [SerializeField] int damagePerHit = 1;
