@@ -8,6 +8,7 @@ public class EnemyDamage : MonoBehaviour
     [SerializeField] int damagePerHit = 1;
 
     [SerializeField] GameObject enemyDeathFX;
+    [SerializeField] ParticleSystem hitParticlePrefab;
     [SerializeField] Transform parent;
 
     // Start is called before the first frame update
@@ -41,6 +42,6 @@ public class EnemyDamage : MonoBehaviour
     private void ProcessHit()
     {
         enemyHitPoints -= damagePerHit;
-        print(enemyHitPoints);
+        hitParticlePrefab.Play();
     }
 }

@@ -33,24 +33,29 @@ public class Pathfinder : MonoBehaviour
     private void CalculatePath()
     {
         LoadBlocks();
-        SetStardAndEndColor();
         BreadthFristSearch();
         CreatePath();
     }
 
     private void CreatePath()
     {
-        path.Add(endWayPoint);
+        SetAsPath(endWayPoint);
 
         Waypoint previous = endWayPoint.exploredFrorm;
         while (previous != startWayPoint)
         {
-            path.Add(previous);
+            SetAsPath(previous);
             previous = previous.exploredFrorm;
         }
 
-        path.Add(startWayPoint);
+        SetAsPath(startWayPoint);
         path.Reverse();
+    }
+
+    private void SetAsPath(Waypoint waypoint)
+    {
+        path.Add(waypoint);
+        waypoint.isPlaceable = false;
     }
 
     private void BreadthFristSearch()
@@ -103,13 +108,6 @@ public class Pathfinder : MonoBehaviour
             neighbour.exploredFrorm = searchCenter;
             //print("Queueing " + neighbour);
         }
-    }
-
-    private void SetStardAndEndColor()
-    {
-        // todo consider moveing out?
-        startWayPoint.SetTopColor(Color.red);
-        endWayPoint.SetTopColor(Color.gray);
     }
 
     private void LoadBlocks()

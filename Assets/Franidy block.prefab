@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8713494104976129351}
   - component: {fileID: 665898043}
   - component: {fileID: 8295743040449057712}
+  - component: {fileID: 850736660535105077}
   m_Layer: 0
   m_Name: Franidy block
   m_TagString: Untagged
@@ -60,6 +61,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isExplored: 0
   exploredFrorm: {fileID: 0}
+  isPlaceable: 1
+  towerPrefab: {fileID: 8411431199825782884, guid: 7673146237336e944880cbb322afeaaf,
+    type: 3}
+--- !u!65 &850736660535105077
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91079860006943948}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: -5, z: 0}
 --- !u!1 &5748097500730437193
 GameObject:
   m_ObjectHideFlags: 0
