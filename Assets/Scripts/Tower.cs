@@ -6,10 +6,10 @@ using UnityEngine;
 public class Tower : MonoBehaviour
 {
     [SerializeField] Transform objectToPan;
-
     [SerializeField] ParticleSystem projectileParticle;
-
     [SerializeField] float attackRange = 10f;
+
+    public Waypoint baseWaypoint;//what the tower staning on
 
     //state of each tower
     Transform targetEnemy;
