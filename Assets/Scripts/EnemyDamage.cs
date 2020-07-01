@@ -7,14 +7,18 @@ public class EnemyDamage : MonoBehaviour
     [SerializeField] int enemyHitPoints = 10;
     [SerializeField] int damagePerHit = 1;
 
-    [SerializeField] GameObject enemyDeathFX;
+    [SerializeField] ParticleSystem enemyDeathFX;
     [SerializeField] ParticleSystem hitParticlePrefab;
-    [SerializeField] Transform parent;
+
+    [SerializeField] AudioClip hitSFX;
+    [SerializeField] AudioClip enemyExploed;
+
+    AudioSource myAudioSource;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        myAudioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -34,13 +38,20 @@ public class EnemyDamage : MonoBehaviour
 
     private void KillEnemy()
     {
-        GameObject fx = Instantiate(enemyDeathFX, transform.position, Quaternion.identity);
-        fx.transform.parent = parent;
+        var vfx = Instantiate(enemyDeathFX, transform.position, Quaternion.identity);
+        vfx.Play();
+        float destroyDelay = vfx.main.duration;
+        Destroy(vfx.gameObject, destroyDelay);
+
+        AudioSource.PlayClipAtPoint(enemyExploed, Camera.main.transform.position);
+
         Destroy(gameObject);
     }
 
     private void ProcessHit()
     {
+        myAudioSource.PlayOneShot(hitSFX);
+
         enemyHitPoints -= damagePerHit;
         hitParticlePrefab.Play();
     }
